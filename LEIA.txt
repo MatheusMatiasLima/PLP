@@ -1,0 +1,13 @@
+Observações:
+
+
+1 abra o programa usando um editor de texto como o sublime text, notepad++ ou o proprio editor da sua ide
+2 o programa funciona apenas no windows por causa dos comandos de terminal que utilizei no menu
+caso seja utilizado outro sistema operacional alguns comandos devem ser substituídos por outro equivalente, 
+por exemplo, o comando system(cls) não funciona no linux já que é um comando do terminal do windows, assim
+como a biblioteca conio, etc...
+4 toda a parte lógica do programa foi testata por mim e está funcionando bem, porém recomendo que vcs também
+testem, vai que tem alguma coisa errada né, nunca se sabe...
+5 qualquer treta me chamem no Zap s2 
+
+BEIJOOOOOOOOOOOOOS
