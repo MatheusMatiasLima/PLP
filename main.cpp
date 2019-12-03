@@ -48,16 +48,8 @@ void StartDisplayMenu() {
 		cout << "             |          Teorema de Pitagoras          |\n";
 		cout << "             |________________________________________|\n";
 		cout << "             |                                        |\n";
-		cout << "             | Forneca para o sistema dois valores va-|\n";
-		cout << "             |lores positivos e -1 para o desconhecido|\n";
-		cout << "             |que voce necessita encontrar, exemplo:  |\n";
-		cout << "             |hipotenusa = -1                         |\n";
-		cout << "             |cateto um = 3                           |\n";
-		cout << "             |cateto dois = 5                         |\n";
-		cout << "             |Nesse exemplo acima sera calculada o va-|\n";
-		cout << "             |lor da hipotenusa a partir de dois cate-|\n";
-		cout << "             |tos.                                    |\n";
-		cout << "             |________________________________________|\n";
+		cout << "             |  Digite -1 no parametro de sua escolha |\n";
+		cout << "             |________________________________________|\n\n";
 
 		cout << "              Hipotenusa: ";
 		cin >> c; cout << endl;
@@ -69,10 +61,10 @@ void StartDisplayMenu() {
 		d = pitagoras(a,b,c);
 		//testa se deu tudo certo
 		if(d > 0.0) {
-			cout << "             Resultado -> " << d << endl;
+			cout << "              Resultado -> " << d << endl;
 		}
 		else {
-			cout << "             Alguma coisa deu errado! verifique os parametros." << endl;
+			cout << "              Alguma coisa deu errado! verifique os parametros." << endl;
 		}
 		//trava a tela antes de limpar
 		getch();
@@ -85,10 +77,10 @@ void StartDisplayMenu() {
 		cout << "             |            Lei da Gravidade            |\n";
 		cout << "             |________________________________________|\n";
 		cout << "             |                                        |\n";
-		cout << "             | Encontrar forÃ§a de atraÃ§Ã£o a           |\n";
-		cout << "             | Encontrar massa  b                     |\n";
-		cout << "             | Encontrar distancia c                  |\n";
-		cout << "             |________________________________________|\n";
+		cout << "             |   [a] Encontrar forÃ§a de atração      |\n";
+		cout << "             |   [b] Encontrar massa                  |\n";
+		cout << "             |   [c] Encontrar distancia              |\n";
+		cout << "             |________________________________________|\n\n";
 
 		cout << "             "; cin >> controle2;
 
@@ -132,9 +124,9 @@ void StartDisplayMenu() {
 		cout << "             |        Teoria da relatividade          |\n";
 		cout << "             |________________________________________|\n";
 		cout << "             |                                        |\n";
-		cout << "             | Calculo da Energia a                   |\n";
-		cout << "             | Calculo da Massa  b                    |\n";
-		cout << "             |________________________________________|\n";
+		cout << "             |        [a] Calculo da Energia          |\n";
+		cout << "             |        [b] Calculo da Massa            |\n";
+		cout << "             |________________________________________|\n\n";
 
 		cout << "             "; cin >> controle2;
 
@@ -160,11 +152,11 @@ void StartDisplayMenu() {
 		cout << "             |          Equacao de Clapeyron          |\n";
 		cout << "             |________________________________________|\n";
 		cout << "             |                                        |\n";
-		cout << "             | Encontrar pressao a                    |\n";
-		cout << "             | Encontrar volume  b                    |\n";
-		cout << "             | Encontrar mols c                       |\n";
-		cout << "             | Encontrar temperatura d                |\n";
-		cout << "             |________________________________________|\n";
+		cout << "             |       [a] Encontrar pressão            |\n";
+		cout << "             |       [b] Encontrar volume             |\n";
+		cout << "             |       [c] Encontrar mols               |\n";
+		cout << "             |       [d] Encontrar temperatura        |\n";
+		cout << "             |________________________________________|\n\n";
 
 		cout << "             "; cin >> controle2;
 		int aux;
@@ -230,7 +222,7 @@ void StartDisplayMenu() {
 		cout << "                 |      [b] Velocidade Final              |\n";
 		cout << "                 |      [c] Aceleracao                    |\n";
 		cout << "                 |      [d] Variacao do Espaco            |\n";
-		cout << "                 |________________________________________|\n";
+		cout << "                 |________________________________________|\n\n";
 
 		cout << "             "; cin >> controle2;
 		if (controle2 == 'a' || controle2 == 'A') {
@@ -291,7 +283,7 @@ void StartDisplayMenu() {
 		cout << "                 |      [a] Distancia Focal               |\n";
 		cout << "                 |      [b] Distancia do Objeto           |\n";
 		cout << "                 |      [c] Distancia da Imagem           |\n";
-		cout << "                 |________________________________________|\n";
+		cout << "                 |________________________________________|\n\n";
 
 		cout << "             "; cin >> controle2;
 
@@ -333,14 +325,14 @@ void StartDisplayMenu() {
 	else if(controle == 'g' || controle == 'G') {
 		cout << "                 .________________________________________.\n";
 		cout << "                 |                                        |\n";
-		cout << "                 |         ForÃ§a sobre particula          |\n";
+		cout << "                 |         Força sobre partícula          |\n";
 		cout << "                 |________________________________________|\n";
 		cout << "                 |                                        |\n";
-		cout << "                 |      [a] ForÃ§a Magnetica               |\n";
-		cout << "                 |      [b] Intencidade do Campo magnetico|\n";
-		cout << "                 |      [c] Intencidade da corrente       |\n";
-		cout << "                 |      [d] Comprimento do fio            |\n";
-		cout << "                 |________________________________________|\n";
+		cout << "                 |    [a] Força Magnetica                 |\n";
+		cout << "                 |    [b] Intencidade do Campo magnetico  |\n";
+		cout << "                 |    [c] Intencidade da corrente         |\n";
+		cout << "                 |    [d] Comprimento do fio              |\n";
+		cout << "                 |________________________________________|\n\n";
 
 		cout << "             "; cin >> controle2;
 		double result;
@@ -359,7 +351,7 @@ void StartDisplayMenu() {
 		}
 
 		else if (controle2 == 'b' || controle2 == 'B') {
-			cout << "             ForÃ§a Magnetica: ";
+			cout << "             Força Magnetica: ";
 			cin >> a; cout << endl;
 			cout << "             Intencidade da corrente: ";
 			cin >> b; cout << endl;
