@@ -77,12 +77,12 @@ void StartDisplayMenu() {
 		cout << "             |            Lei da Gravidade            |\n";
 		cout << "             |________________________________________|\n";
 		cout << "             |                                        |\n";
-		cout << "             |   [a] Encontrar forÃ§a de atração      |\n";
+		cout << "             |   [a] Encontrar forca de atracao       |\n";
 		cout << "             |   [b] Encontrar massa                  |\n";
 		cout << "             |   [c] Encontrar distancia              |\n";
 		cout << "             |________________________________________|\n\n";
 
-		cout << "             "; cin >> controle2;
+		cout << "             Opcao: "; cin >> controle2; cout << endl;
 
 		if (controle2 == 'a' || controle2 == 'A') {
 			cout << "             Massa 1: ";
@@ -128,7 +128,7 @@ void StartDisplayMenu() {
 		cout << "             |        [b] Calculo da Massa            |\n";
 		cout << "             |________________________________________|\n\n";
 
-		cout << "             "; cin >> controle2;
+		cout << "             Opcao: "; cin >> controle2; cout << endl;
 
 		if (controle2 == 'a' || controle2 == 'A') {
 			cout << "             Massa: ";
@@ -152,13 +152,13 @@ void StartDisplayMenu() {
 		cout << "             |          Equacao de Clapeyron          |\n";
 		cout << "             |________________________________________|\n";
 		cout << "             |                                        |\n";
-		cout << "             |       [a] Encontrar pressão            |\n";
+		cout << "             |       [a] Encontrar pressao            |\n";
 		cout << "             |       [b] Encontrar volume             |\n";
 		cout << "             |       [c] Encontrar mols               |\n";
 		cout << "             |       [d] Encontrar temperatura        |\n";
 		cout << "             |________________________________________|\n\n";
 
-		cout << "             "; cin >> controle2;
+		cout << "             Opcao: "; cin >> controle2; cout << endl;
 		int aux;
 		cout << "             1 pra pressao em atm e 0 para mmHg: ";
 		cin >> aux; cout << endl;
@@ -224,7 +224,7 @@ void StartDisplayMenu() {
 		cout << "                 |      [d] Variacao do Espaco            |\n";
 		cout << "                 |________________________________________|\n\n";
 
-		cout << "             "; cin >> controle2;
+		cout << "             Opcao: "; cin >> controle2; cout << endl;
 		if (controle2 == 'a' || controle2 == 'A') {
 			cout << "             v: ";
 			cin >> a; cout << endl;
@@ -285,7 +285,7 @@ void StartDisplayMenu() {
 		cout << "                 |      [c] Distancia da Imagem           |\n";
 		cout << "                 |________________________________________|\n\n";
 
-		cout << "             "; cin >> controle2;
+		cout << "             Opcao: "; cin >> controle2; cout << endl;
 
 		if (controle2 == 'a' || controle2 == 'A') {
 			cout << "             Distancia do Objeto: ";
@@ -334,7 +334,7 @@ void StartDisplayMenu() {
 		cout << "                 |    [d] Comprimento do fio              |\n";
 		cout << "                 |________________________________________|\n\n";
 
-		cout << "             "; cin >> controle2;
+		cout << "             Opcao: "; cin >> controle2; cout << endl;
 		double result;
 		if (controle2 == 'a' || controle2 == 'A') {
 			cout << "             Intencidade do Campo: ";
