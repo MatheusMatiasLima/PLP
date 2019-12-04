@@ -1,3 +1,4 @@
+//versão FINAL
 #include <iostream>
 #include <cmath>
 #include "matfoo.h"
@@ -7,12 +8,12 @@
 using namespace std;
 
 //funï¿½ï¿½o iterativa para gerar o caos dos nï¿½meros
-void caosContagem(double x, double k, int lenght) {
+void caosContagem(double x, double k, int len) {
 	int i = 0;
 	double aux = caosNosNumeros(x,k);
-	cout << x << endl;
-	while(i < lenght) {
-		cout << aux << endl;
+	cout << "                 " << x << endl;
+	while(i < len) {
+		cout << "                 " << aux << endl;
 		aux = caosNosNumeros(aux,k);
 		i = 1 + i;
 	}
@@ -64,7 +65,7 @@ void StartDisplayMenu() {
 			cout << "              Resultado -> " << d << endl;
 		}
 		else {
-			cout << "              Alguma coisa deu errado! verifique os parametros." << endl;
+			cout << "              Alguma coisa deu errado! Verifique os parametros." << endl;
 		}
 		//trava a tela antes de limpar
 		getch();
@@ -92,27 +93,27 @@ void StartDisplayMenu() {
 			cout << "             Distancia: ";
 			cin >> c; cout << endl;
 			d = forca_de_atracao(a,b,c);
-			cout << "             Resultado -> " << d << endl;
+			cout << "             Resultado -> " << d << " Newtons" << endl;
 		}
 		else if (controle2 == 'b' || controle2 == 'B') {
 			cout << "             Massa 1: ";
 			cin >> a; cout << endl;
-			cout << "             Massa 2: ";
-			cin >> b; cout << endl;
 			cout << "             Distancia: ";
+			cin >> b; cout << endl;
+			cout << "             forca de atracao: ";
 			cin >> c; cout << endl;
 			d = massa_lei_gravidade(a,b,c);
-			cout << "             Resultado -> " << d << endl;
+			cout << "             Resultado -> " << d << " Kg" << endl;
 		}
 		else if (controle2 == 'c' || controle2 == 'C') {
 			cout << "             Massa 1: ";
 			cin >> a; cout << endl;
 			cout << "             Massa 2: ";
 			cin >> b; cout << endl;
-			cout << "             Distancia: ";
+			cout << "             forca de atracao: ";
 			cin >> c; cout << endl;
-			d = massa_lei_gravidade(a,b,c);
-			cout << "             Resultado -> " << d << endl;
+			d = distance_lei_gravidade(a,b,c);
+			cout << "             Resultado -> " << d << " Metros" << endl;
 		}
 		getch();
 		system("cls");
@@ -134,15 +135,17 @@ void StartDisplayMenu() {
 			cout << "             Massa: ";
 			cin >> a; cout << endl;
 			d = energia_relatividade(a);
-			cout << "             Resultado -> " << d << endl;
+			cout << "             Resultado -> " << d << " Joules" << endl;
 		}
 
 		else if (controle2 == 'b' || controle2 == 'B') {
 			cout << "             Energia: ";
 			cin >> a; cout << endl;
 			d = massa_relatividade(a);
-			cout << "             Resultado -> " << d << endl;
+			cout << "             Resultado -> " << d << " Kg" << endl;
 		}
+		getch();
+		system("cls");
 
 	}
 
@@ -183,7 +186,7 @@ void StartDisplayMenu() {
 			cout << "             Temperatura: ";
 			cin >> c; cout << endl;
 			d = volume_clapeyron(a,b,c,aux);
-			cout << "             Resultado -> " << d << endl;
+			cout << "             Resultado -> " << d << " Litros" << endl;
 
 		}
 
@@ -207,8 +210,10 @@ void StartDisplayMenu() {
 			cout << "             Mols: ";
 			cin >> c; cout << endl;
 			d = temperatura_clapeyron(a,b,c,aux);
-			cout << "             Resultado -> " << d << endl;
+			cout << "             Resultado -> " << d << " Kelvins" << endl;
 		}
+		getch();
+		system("cls");
 	
 	}
 
@@ -224,53 +229,55 @@ void StartDisplayMenu() {
 		cout << "                 |      [d] Variacao do Espaco            |\n";
 		cout << "                 |________________________________________|\n\n";
 
-		cout << "             Opcao: "; cin >> controle2; cout << endl;
+		cout << "                 Opcao: "; cin >> controle2; cout << endl;
 		if (controle2 == 'a' || controle2 == 'A') {
-			cout << "             v: ";
+			cout << "                 Velocidade Final: ";
 			cin >> a; cout << endl;
-			cout << "             a: ";
+			cout << "                 Aceleracao: ";
 			cin >> b; cout << endl;
-			cout << "             Delta: ";
+			cout << "                 DeltaS: ";
 			cin >> c; cout << endl;
 			d = velocidadeITorricelli(a,b,c);
-			cout << "             Resultado -> " << d << endl;
+			cout << "                 Resultado -> " << d << " ms" << endl;
 
 		}
 
 		else if (controle2 == 'b' || controle2 == 'B') {
-			cout << "             v: ";
+			cout << "                 Velocidade Inicial: ";
 			cin >> a; cout << endl;
-			cout << "             a: ";
+			cout << "                 Aceleracao: ";
 			cin >> b; cout << endl;
-			cout << "             Delta: ";
+			cout << "                 DeltaS: ";
 			cin >> c; cout << endl;
 			d = velocidadeFTorricelli(a,b,c);
-			cout << "             Resultado -> " << d << endl;
+			cout << "                 Resultado -> " << d << " ms" << endl;
 
 		}
 
 		else if (controle2 == 'c' || controle2 == 'C') {
-			cout << "             v: ";
+			cout << "                 Velocidade inicial: ";
 			cin >> a; cout << endl;
-			cout << "             a: ";
+			cout << "                 Velocidade final: ";
 			cin >> b; cout << endl;
-			cout << "             Delta: ";
+			cout << "                 DeltaS: ";
 			cin >> c; cout << endl;
 			d = aceleracaoTorricelli(a,b,c);
-			cout << "             Resultado -> " << d << endl;
+			cout << "                 Resultado -> " << d << " ms^2" << endl;
 
 		}
 
 		else if (controle2 == 'd' || controle2 == 'D') {
-			cout << "             Velocidade Inicial: ";
+			cout << "                 Velocidade Inicial: ";
 			cin >> a; cout << endl;
-			cout << "             Velocidade Final: ";
+			cout << "                 Velocidade Final: ";
 			cin >> b; cout << endl;
-			cout << "             Delta: ";
+			cout << "                 Aceleracao: ";
 			cin >> c; cout << endl;
 			d = variacaoEspacoTorricelli(a,b,c);
-			cout << "             Resultado -> " << d << endl;
+			cout << "                 Resultado -> " << d << " Metros" << endl;
 		}
+		getch();
+		system("cls");
 	
 	}
 
@@ -285,39 +292,40 @@ void StartDisplayMenu() {
 		cout << "                 |      [c] Distancia da Imagem           |\n";
 		cout << "                 |________________________________________|\n\n";
 
-		cout << "             Opcao: "; cin >> controle2; cout << endl;
+		cout << "                 Opcao: "; cin >> controle2; cout << endl;
 
 		if (controle2 == 'a' || controle2 == 'A') {
-			cout << "             Distancia do Objeto: ";
+			cout << "                 Distancia do Objeto: ";
 			cin >> a; cout << endl;
-			cout << "             Distancia da Imagem: ";
+			cout << "                 Distancia da Imagem: ";
 			cin >> b; cout << endl;
 			d = distanciaFocal(a,b);
-			cout << "             Resultado -> " << d << endl;
+			cout << "                 Resultado -> " << d << endl;
 
 		}
 
 		else if (controle2 == 'b' || controle2 == 'B') {
-			cout << "             Distancia Focal: ";
+			cout << "                 Distancia Focal: ";
 			cin >> a; cout << endl;
-			cout << "             Distancia da Imagem: ";
+			cout << "                 Distancia da Imagem: ";
 			cin >> b; cout << endl;
 
 			d = distanciaObj(a,b);
-			cout << "             Resultado -> " << d << endl;
+			cout << "                 Resultado -> " << d << endl;
 
 		}
 
 		else if (controle2 == 'c' || controle2 == 'C') {
-			cout << "             Distancia Focal: ";
+			cout << "                 Distancia Focal: ";
 			cin >> a; cout << endl;
-			cout << "             Distancia do Objeto: ";
+			cout << "                 Distancia do Objeto: ";
 			cin >> b; cout << endl;
 
 			d = distanciaImg(a,b);
-			cout << "             Resultado -> " << d << endl;
+			cout << "                 Resultado -> " << d << endl;
 		}
-
+		getch();
+		system("cls");
 
 	
 	}
@@ -325,71 +333,72 @@ void StartDisplayMenu() {
 	else if(controle == 'g' || controle == 'G') {
 		cout << "                 .________________________________________.\n";
 		cout << "                 |                                        |\n";
-		cout << "                 |         Força sobre partícula          |\n";
+		cout << "                 |         Forca sobre particula          |\n";
 		cout << "                 |________________________________________|\n";
 		cout << "                 |                                        |\n";
-		cout << "                 |    [a] Força Magnetica                 |\n";
+		cout << "                 |    [a] Forca Magnetica                 |\n";
 		cout << "                 |    [b] Intencidade do Campo magnetico  |\n";
 		cout << "                 |    [c] Intencidade da corrente         |\n";
 		cout << "                 |    [d] Comprimento do fio              |\n";
 		cout << "                 |________________________________________|\n\n";
 
-		cout << "             Opcao: "; cin >> controle2; cout << endl;
+		cout << "                 Opcao: "; cin >> controle2; cout << endl;
 		double result;
 		if (controle2 == 'a' || controle2 == 'A') {
-			cout << "             Intencidade do Campo: ";
+			cout <<"                  Intencidade do Campo: ";
 			cin >> a; cout << endl;
-			cout << "             Intencidade da corrente: ";
+			cout << "                 Intencidade da corrente: ";
 			cin >> b; cout << endl;
-			cout << "             Comprimento do fio: ";
+			cout << "                 Comprimento do fio: ";
 			cin >> c; cout << endl;
-			cout << "             Angulo: ";
+			cout << "                 Angulo: ";
 			cin >> d; cout << endl;
 			result = forcaMagnetica(a, b, c, d);
-			cout << "             Resultado -> " << result << endl;
+			cout << "                 Resultado -> " << result << " Newtons" << endl;
 
 		}
 
 		else if (controle2 == 'b' || controle2 == 'B') {
-			cout << "             Força Magnetica: ";
+			cout << "                 Força Magnetica: ";
 			cin >> a; cout << endl;
-			cout << "             Intencidade da corrente: ";
+			cout << "                 Intencidade da corrente: ";
 			cin >> b; cout << endl;
-			cout << "             Comprimento do fio: ";
+			cout << "                 Comprimento do fio: ";
 			cin >> c; cout << endl;
-			cout << "             Angulo: ";
+			cout << "                 Angulo: ";
 			cin >> d; cout << endl;
 			result = intensidadeCamp(a, b, c, d);
-			cout << "             Resultado -> " << result << endl;
+			cout << "                 Resultado -> " << result << " Tesla" << endl;
 		}
 
 		else if (controle2 == 'c' || controle2 == 'C') {
-			cout << "             F: ";
+			cout << "                 Forca magnetica: ";
 			cin >> a; cout << endl;
-			cout << "             B: ";
+			cout << "                 Intensidade do campo: ";
 			cin >> b; cout << endl;
-			cout << "             l: ";
+			cout << "                 Comprimento do fio: ";
 			cin >> c; cout << endl;
-			cout << "             sen: ";
+			cout << "                 Angulo: ";
 			cin >> d; cout << endl;
 			result = intCorrente(a, b, c, d);
-			cout << "             Resultado -> " << result << endl;
+			cout << "                 Resultado -> " << result << " Amperes" << endl;
 
 		}
 
 		else if (controle2 == 'd' || controle2 == 'D') {
-			cout << "             F: ";
+			cout << "                 Forca magnetica: ";
 			cin >> a; cout << endl;
-			cout << "             B: ";
+			cout << "                 Intensidade do campo: ";
 			cin >> b; cout << endl;
-			cout << "             i: ";
+			cout << "                 Intensidade da corrente: ";
 			cin >> c; cout << endl;
-			cout << "             sen: ";
+			cout << "                 Angulo: ";
 			cin >> d; cout << endl;
 			result = compFio(a, b, c, d);
-			cout << "             Resultado -> " << result << endl;
+			cout << "                 Resultado -> " << result << " Metros" << endl;
 		}
-	
+		getch();
+		system("cls");	
 
 
 	}
@@ -400,23 +409,22 @@ void StartDisplayMenu() {
 		cout << "                 |             Teoria do Caos             |\n";
 		cout << "                 |________________________________________|\n";
 		cout << "                 |                                        |\n";
-		cout << "                 |                                        |\n";
-		cout << "                 |                                        |\n";
-		cout << "                 |                                        |\n";
-		cout << "                 |________________________________________|\n";
+		cout << "                 |            Caos nos numeros            |\n";
+		cout << "                 |________________________________________|\n\n";
 
-		cout << "             X: ";
+		cout << "                 X: ";
 		cin >> a; cout << endl;
-		cout << "             K: ";
+		cout << "                 K: ";
 		cin >> b; cout << endl;		
-		d = caosNosNumeros(a,b);
-		cout << "             Resultado -> " << d << endl;
+		caosContagem(a,b,10);
+		getch();
+		system("cls");
 
 	}
 
 
 	
-	else if(controle != 'z')
+	if(controle != 'z')
 		StartDisplayMenu();
 }
 

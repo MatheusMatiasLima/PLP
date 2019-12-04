@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout>
 	<Files>
-		<File Name="main.cpp" Top="Yes" Tabpos="1" TopLine="323">
-			<Cursor Line="339" Column="71"/>
+		<File Name="main.cpp" Top="Yes" Tabpos="1" TopLine="176">
+			<Cursor Line="339" Column="42"/>
 		</File>
-		<File Name="matfoo.cpp" Top="No" Tabpos="2" TopLine="1">
-			<Cursor Line="1" Column="1"/>
+		<File Name="matfoo.cpp" Top="No" Tabpos="2" TopLine="429">
+			<Cursor Line="488" Column="17"/>
 		</File>
 		<File Name="matfoo.h" Top="No" Tabpos="3" TopLine="1">
-			<Cursor Line="1" Column="1"/>
+			<Cursor Line="43" Column="7"/>
 		</File>
 	</Files>
 </Layout>
